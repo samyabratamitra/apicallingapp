@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.apicalling.service.ProductAPIService;
@@ -18,9 +19,7 @@ public class ProductAPIController {
 	private ProductAPIService service;
 	
 	@GetMapping("/getProducts")
-	public List<String> addProduct(@PathParam(value = "category") List<String> category) {
-		
-		
+	public Object addProduct(@PathParam(value = "category") String category) {	
 		return service.getProduct(category);
 	}
 

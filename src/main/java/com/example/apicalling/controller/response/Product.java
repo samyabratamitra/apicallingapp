@@ -14,10 +14,6 @@ public class Product {
 	private String pdtName;
 	private double price;
 	private int qty;
-	
-	public Product() {
-
-	}
 
 	public String getCategory() {
 		return category;
